@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> READ </title>
+        <link rel="stylesheet" href="css/mystyles.css">
+    </head>
+    <body>
+    <h1> SELECT </h1>
+
+    <!-- <% files_array %>
+        <div class="READ">
+            <label for="">Choose a file:</label>
+            <div></div>
+            <div class="select is-primary">
+                <select>
+                    <% files_array.forEach(function(files){ %>
+                        <option><%= files %></option>
+                    <% }); %> 
+                </select>
+            </div> -->
+  
+ 
+    <% files_array %>
+        <div class="READ">
+            <label for="">Choose a file:</label>
+            <div></div>
+            <form class="box" action="/update_file" method="post">
+                <div class="select is-primary">
+                    <select name="select">
+                        <% files_array.forEach(function(files){ %>
+                            <option value="<%= files %>">
+                                <%= files %>
+                            </option>
+                        <% }); %>  
+                    </select>
+                </div>
+                <button type="submit" class="button is-rounded is-black">Edit file</button>
+            </form>
+        </div>
+    </body>
+</html>
+

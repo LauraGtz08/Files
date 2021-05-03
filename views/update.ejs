@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> UPDATE </title>
+        <link rel="stylesheet" href="css/mystyles.css">
+    </head>
+    <body>
+        
+        <div class="UPDATE">
+            <form class="box" action="/save_file" method="post">
+                <input type="hidden" name="name" value="<%= data.nombre %>">
+                <label for="POST-content" class="label">Content: </label>
+                <textarea name="content" rows="10" cols="50"> <%= data.content %> </textarea>
+                <button type="submit" class="button is-rounded is-black">Save</button>
+            </form>
+        </div>
+    </body>
+</html>
